@@ -40,6 +40,11 @@ If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Lar
 ```
 composer install 
 cp .env.example .env
-php artisan migrate:fresh
+composer require laravel/ui
+composer require tcg/voyager
+php artisan voyager:install
+php artisan voyager:admin admin@admin.com --create
+npm install
+npm run dev
 php artisan serve
 ```
