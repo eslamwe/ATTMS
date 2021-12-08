@@ -31,7 +31,7 @@ If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Lar
 
 1-Download XAMPP
 
-2-Open Apache and MySQL services then Create a Database in phpmyadmin called "attms"
+2-Open Apache and MySQL services then Create a Database in phpmyadmin called "homestead"
 
 3- Clone the repo <https://github.com/AdhamSamer3301/ATTMS.git>
 
@@ -40,6 +40,11 @@ If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Lar
 ```
 composer install 
 cp .env.example .env
-php artisan migrate:fresh
+composer require laravel/ui
+composer require tcg/voyager
+php artisan voyager:install
+php artisan voyager:admin admin@admin.com --create
+npm install
+npm run dev
 php artisan serve
 ```
